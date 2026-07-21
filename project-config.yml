@@ -1,0 +1,19 @@
+header:
+  version: 14
+
+machine: qemux86-64
+distro: poky
+
+repos:
+  poky:
+    url: https://git.yoctoproject.org/poky
+    branch: scarthgap
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+local_conf_header:
+  standard: |
+    PACKAGE_CLASSES = "package_ipk"
+    EXTRA_IMAGE_FEATURES = "debug-tweaks"
